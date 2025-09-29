@@ -71,8 +71,11 @@ docker build -t blood-glucose-exp4 .
 #### 2. Run Individual Experiments
 ```bash
 # Run Experiment 1 (Window Selection with CNN-LSTM and ResNet)
+# NOTE: Experiment 1 requires 3 sequential Docker commands
 cd blood_glucose_experiments/experiment_1
-docker run -v $(pwd)/results:/app/results blood-glucose-exp1
+docker run -v $(pwd)/results:/app/results blood-glucose-exp1 python3 experiment_1_process.py   # Step 1: Preprocessing
+docker run -v $(pwd)/results:/app/results blood-glucose-exp1 python3 experiment_1_lstm.py     # Step 2: CNN-LSTM
+docker run -v $(pwd)/results:/app/results blood-glucose-exp1 python3 experiment_1_resnet.py   # Step 3: ResNet34
 
 # Run Experiment 2 (CNN-GRU Regression)
 cd ../experiment_2
