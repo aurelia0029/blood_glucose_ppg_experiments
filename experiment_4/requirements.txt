@@ -1,0 +1,21 @@
+# Experiment 4: Classification with Augmentation Before Splitting Requirements
+
+# Core scientific computing
+numpy>=1.21.0
+pandas>=1.3.0
+scipy>=1.7.0
+matplotlib>=3.5.0
+
+# Machine learning
+scikit-learn>=1.0.0
+torch>=1.10.0
+imbalanced-learn>=0.8.0
+
+# Signal processing and biomedical
+neurokit2>=0.2.0
+
+# Data handling
+pyarrow>=5.0.0
+
+# Progress bars
+tqdm>=4.62.0

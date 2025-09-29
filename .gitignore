@@ -1,0 +1,55 @@
+# Data files - too large for git
+output/
+*.parquet
+*.npy
+*.npz
+
+# Results and model files
+results/
+*_results/
+models/
+*.pth
+*.h5
+*.pkl
+*.joblib
+
+# Logs and temporary files
+*.log
+*.json
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Docker volumes and temp files
+docker-compose.override.yml
+.env
+
+# Plot images (if you want to track them, remove this)
+plots/
+*.png
+*.jpg
+*.jpeg
+*.pdf
