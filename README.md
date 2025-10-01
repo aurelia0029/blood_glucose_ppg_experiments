@@ -276,23 +276,6 @@ Edit the `Config` class in each experiment file to modify:
 - **JSON Logs**: Detailed experiment configuration and results
 - **Data Files**: Processed datasets for reproducibility
 
-## Architecture Benefits of Individual Docker Containers
-
-### Isolation and Dependency Management
-- Each experiment has its own Python environment with specific dependencies
-- Prevents version conflicts between different experiment requirements
-- Easier maintenance and updates for individual experiments
-
-### Resource Management
-- Run only the experiment you need without loading unnecessary dependencies
-- Better memory management for large-scale experiments
-- Parallel execution of different experiments on different machines
-
-### Development Workflow
-- Independent development and testing of each experiment
-- Easier debugging with focused container environments
-- Version control of experiment-specific configurations
-
 ## Hardware Requirements
 - **CPU**: Multi-core recommended for faster processing
 - **Memory**: 8GB+ RAM recommended
