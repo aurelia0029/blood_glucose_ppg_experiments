@@ -336,3 +336,7 @@ After downloading, the raw data should be processed into the required format:
 - PPG signals saved as NumPy arrays in `output/ppg_filtered_v3/` directory
 
 **Note**: For convenience, the preprocessed files `cleaned_bgl_data.parquet` and `output/ppg_filtered_v3/` are available for direct use, eliminating the need to download and process the original datasets unless you want to modify the preprocessing pipeline.
+
+## Additional Information
+
+For detailed experiment instructions and additional information, please refer to: [Experiment Details and Instructions](https://docs.google.com/document/d/12Rj_SWc925tQM-okx5Qzg_KhRU5lsg5J/edit)
