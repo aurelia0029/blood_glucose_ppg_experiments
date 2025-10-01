@@ -139,47 +139,10 @@ cd ../experiment_4
 python3 experiment_4.py
 ```
 
-## Data Sources
-
-This project uses two primary datasets for blood glucose prediction experiments:
-
-### 1. VitalDB Dataset
-- **Source**: [VitalDB - Vital Signs Database](https://vitaldb.net/dataset/?query=overview)
-- **Description**: A large-scale database of vital signs data from real surgical cases
-- **Contains**: PPG signals, blood glucose measurements, and other physiological parameters
-- **Usage**: Primary source for PPG signal data and corresponding blood glucose levels
-
-### 2. Mendeley PPG-BGL Dataset
-- **Source**: [Photoplethysmography signals collected from pulse sensor to measure blood glucose level](https://data.mendeley.com/datasets/37pm7jk7jn/3)
-- **Description**: Dataset specifically designed for blood glucose prediction using PPG signals
-- **Contains**: PPG waveforms collected via pulse sensors with corresponding glucose measurements
-- **Usage**: Additional validation and testing data for glucose prediction models
-
-### How to Download Data
-
-#### VitalDB Dataset
-1. Visit [VitalDB website](https://vitaldb.net/dataset/?query=overview)
-2. Create an account and request access to the dataset
-3. Download the relevant PPG and glucose measurement files
-4. Follow VitalDB's data use agreement and citation requirements
-
-#### Mendeley Dataset
-1. Go to [Mendeley Data repository](https://data.mendeley.com/datasets/37pm7jk7jn/3)
-2. Click "Download" to get the dataset files
-3. Extract the PPG signal files and glucose measurements
-4. Cite the dataset appropriately in any publications
-
-### Data Preprocessing
-After downloading, the raw data should be processed into the required format:
-- PPG signals filtered and segmented into appropriate time windows
-- Blood glucose measurements aligned with PPG timestamps
-- Data cleaned and stored as `cleaned_bgl_data.parquet`
-- PPG signals saved as NumPy arrays in `output/ppg_filtered_v3/` directory
-
 ## Required Data Files
-Ensure these files are present in each experiment directory:
-- `cleaned_bgl_data.parquet` - Cleaned BGL data
-- `output/ppg_filtered_v3/` - Directory containing PPG signal files (*.npy)
+The experiments require the following preprocessed data files:
+- `cleaned_bgl_data.parquet` - Cleaned BGL data (available in repository)
+- `output/ppg_filtered_v3/` - Directory containing PPG signal files (*.npy, to be uploaded)
 
 ## Expected Output Structure
 
@@ -351,3 +314,42 @@ docker logs <container_id>
 # Debug interactively
 docker run -it blood-glucose-experiments bash
 ```
+
+## Data Sources
+
+This project uses two primary datasets for blood glucose prediction experiments:
+
+### 1. VitalDB Dataset
+- **Source**: [VitalDB - Vital Signs Database](https://vitaldb.net/dataset/?query=overview)
+- **Description**: A large-scale database of vital signs data from real surgical cases
+- **Contains**: PPG signals, blood glucose measurements, and other physiological parameters
+- **Usage**: Primary source for PPG signal data and corresponding blood glucose levels
+
+### 2. Mendeley PPG-BGL Dataset
+- **Source**: [Photoplethysmography signals collected from pulse sensor to measure blood glucose level](https://data.mendeley.com/datasets/37pm7jk7jn/3)
+- **Description**: Dataset specifically designed for blood glucose prediction using PPG signals
+- **Contains**: PPG waveforms collected via pulse sensors with corresponding glucose measurements
+- **Usage**: Additional validation and testing data for glucose prediction models
+
+### How to Download Data
+
+#### VitalDB Dataset
+1. Visit [VitalDB website](https://vitaldb.net/dataset/?query=overview)
+2. Create an account and request access to the dataset
+3. Download the relevant PPG and glucose measurement files
+4. Follow VitalDB's data use agreement and citation requirements
+
+#### Mendeley Dataset
+1. Go to [Mendeley Data repository](https://data.mendeley.com/datasets/37pm7jk7jn/3)
+2. Click "Download" to get the dataset files
+3. Extract the PPG signal files and glucose measurements
+4. Cite the dataset appropriately in any publications
+
+### Data Preprocessing
+After downloading, the raw data should be processed into the required format:
+- PPG signals filtered and segmented into appropriate time windows
+- Blood glucose measurements aligned with PPG timestamps
+- Data cleaned and stored as `cleaned_bgl_data.parquet`
+- PPG signals saved as NumPy arrays in `output/ppg_filtered_v3/` directory
+
+**Note**: For convenience, the preprocessed files `cleaned_bgl_data.parquet` and `output/ppg_filtered_v3/` are available for direct use, eliminating the need to download and process the original datasets unless you want to modify the preprocessing pipeline.
